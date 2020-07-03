@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="Login.css">
+<!-- Java Script-->
+<script language="javascript" src="jquery-3.5.1.js"></script>
+<script type="text/javascript" src="userValadation.js"></script>
+	<script type="text/javascript">
+	function validateForm()
+	{
+		  var x = document.forms["LoginForm"]["user"].value;
+		  var y = document.forms["LoginForm"]["pass"].value;
+		  if (x == "")
+		  {
+		  alert("Username must be filled out");
+		  event.preventDefault();
+		  }
+		  if (y == "")
+		  {
+		  alert("Enter Password");
+		  event.preventDefault();
+		  }
+		 
+	}
+</script>
+
+</head>
+<body>
+
+	
+	
+
+	
+	
+
+	
+	<div class="loginbox" >
+	<img src="avatar.jpg" class="avatar">
+	<h1>Login Here</h1>
+	
+	
+	<form name="LoginForm" action="Login" method="POST" onsubmit="return validateForm()">
+
+	<table>
+	
+	<p>Username</p>
+		<input type="text" name="user" id="user" placeholder="Enter Username">
+
+	
+	<p>Password</p>
+		<input type="password" name="pass" id="pass" placeholder="Enter Password" >
+		<div id="message">
+		
+		<input type="submit" name="Submit" value="Login">
+		
+		<a href="register.jsp">Register</a>
+	
+	
+		<!--  <input type="button" onclick="UpdateStatus()" value='Status'>
+		<div id="message"></div>-->
+	
+	
+	</table>
+	</div>
+</form>
+	
+</body>
+</html>
